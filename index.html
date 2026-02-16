@@ -38,7 +38,7 @@
                     <a href="#results" class="text-gray-700 hover:text-indigo-600 transition duration-300">Results</a>
                     <a href="#workflow" class="text-gray-700 hover:text-indigo-600 transition duration-300">Workflow</a>
                     <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition duration-300">Contact</a>
-                    <a href="#" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition duration-300 ripple">
+                    <a href="https://github.com/Mini-EfficientRAG" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition duration-300 ripple">
                         <i class="fab fa-github mr-2"></i>GitHub
                     </a>
                 </div>
@@ -83,9 +83,8 @@
                     <i class="fas fa-microchip"></i>
                     <span>Explore the Pipeline</span>
                 </a>
-                <a href="https://github.com/Mini-EfficientRAG" class="w-64 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition duration-300 flex items-center justify-center space-x-2 ripple">
-                    <i class="fab fa-github"></i>
-                    <span>View Repository</span>
+                <a href="https://github.com/Mini-EfficientRAG/Materials/blob/main/Final_Poster.pdf" class="w-64 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition duration-300 flex items-center justify-center space-x-2 ripple">
+                    <span>View Poster</span>
                 </a>
             </div>
             
@@ -107,7 +106,7 @@
                     Retrieval-augmented generation (RAG) systems often struggle with multi-hop question answering, where a single retrieval step rarely surfaces all necessary evidence. Iterative approaches improve recall but typically rely on repeated LLM calls at each hop, incurring substantial latency and cost.
                 </p>
                 <p class="text-xl text-gray-700 leading-relaxed">
-                    Mini-EfficientRAG replaces per-hop LLM query rewriting with lightweight learned controllers (a Labeler and a Filter). Designed to be classroom-friendly, this project successfully reproduced the system's core claims using entirely open-source components on a single A100 GPU in Google Colab.
+                    Mini-EfficientRAG replaces per-hop LLM query rewriting with lightweight learned controllers (a Labeler and a ). Designed to be classroom-friendly, this project successfully reproduced the system's core claims using entirely open-source components on a single A100 GPU in Google Colab.
                 </p>
             </div>
             
@@ -289,7 +288,7 @@
                         3
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Filter & Refine</h3>
-                    <p class="text-gray-600">Filter assigns binary labels to aggregated tokens and constructs the next-hop query.</p>
+                    <p class="text-gray-600">Filter assigns binary labels to aggregated tokens and constructs the next-hop query, untill all required documents (wih no unuseful extra document) are retrieved.</p>
                 </div>
                 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
@@ -297,7 +296,7 @@
                         4
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Generate</h3>
-                    <p class="text-gray-600">The generator (LLaMA-3) produces the final answer from the compact context.</p>
+                    <p class="text-gray-600">The generator (LLaMA-3) produces the final answer from the compact yet enough context.</p>
                 </div>
             </div>
         </div>
@@ -309,7 +308,7 @@
             <p class="text-xl text-gray-600 mb-10">
                 A compact, Colab-friendly testbed for future work on efficient multi-hop RAG, including exploring alternative controllers and robustness studies.
             </p>
-            <a href="#" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 ripple shine">
+            <a href="https://github.com/Mini-EfficientRAG" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 ripple shine">
                 View on GitHub <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </div>
@@ -345,7 +344,7 @@
                     <p class="text-gray-400 mb-2">Ilia Hashemi Rad</p>
                     <p class="text-gray-400 mb-4">Department of Electrical & Computer Engineering<br>Purdue University</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition duration-300 zoom-hover" title="GitHub">
+                        <a href="https://github.com/IliaHashemiRad" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition duration-300 zoom-hover" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="mailto:ihashemi@purdue.edu" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition duration-300 zoom-hover" title="Email">
