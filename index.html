@@ -71,11 +71,11 @@
             </h1>
             
             <p class="text-2xl sm:text-3xl lg:text-4xl text-white/90 mb-8 fade-in font-light" data-aos="fade-up" data-aos-delay="200">
-                [cite_start]A Tiny Reproduction of an Efficient & Accurate System [cite: 1]
+                A Tiny Reproduction of an Efficient & Accurate System
             </p>
             
             <p class="text-lg sm:text-xl text-white/80 mb-12 max-w-3xl mx-auto fade-in" data-aos="fade-up" data-aos-delay="400">
-                [cite_start]Adapting the official EfficientRAG pipeline to a single-GPU, notebook-based setting on the HotpotQA benchmark[cite: 8]. [cite_start]Retrieve fewer passages, achieve higher recall, and generate accurate answers with just one final LLM call[cite: 10, 238].
+                Adapting the official EfficientRAG pipeline to a single-GPU, notebook-based setting on the HotpotQA benchmark. Retrieve fewer passages, achieve higher recall, and generate accurate answers with just one final LLM call.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 fade-in" data-aos="fade-up" data-aos-delay="600">
@@ -104,14 +104,16 @@
             
             <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 sm:p-12 shadow-xl card-hover" data-aos="zoom-in">
                 <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                    [cite_start]Retrieval-augmented generation (RAG) systems often struggle with multi-hop question answering, where a single retrieval step rarely surfaces all necessary evidence[cite: 6]. [cite_start]Iterative approaches improve recall but typically rely on repeated LLM calls at each hop, incurring substantial latency and cost[cite: 20].
+                    Retrieval-augmented generation (RAG) systems often struggle with multi-hop question answering, where a single retrieval step rarely surfaces all necessary evidence. Iterative approaches improve recall but typically rely on repeated LLM calls at each hop, incurring substantial latency and cost.
                 </p>
                 <p class="text-xl text-gray-700 leading-relaxed">
-                    [cite_start]Mini-EfficientRAG replaces per-hop LLM query rewriting with lightweight learned controllers (a Labeler and a Filter)[cite: 22, 23]. [cite_start]Designed to be classroom-friendly, this project successfully reproduced the system's core claims using entirely open-source components on a single A100 GPU in Google Colab[cite: 26, 287].
+                    Mini-EfficientRAG replaces per-hop LLM query rewriting with lightweight learned controllers (a Labeler and a Filter). Designed to be classroom-friendly, this project successfully reproduced the system's core claims using entirely open-source components on a single A100 GPU in Google Colab.
                 </p>
             </div>
+            
             <div class="text-center my-12" data-aos="fade-up">
-                            </div>
+                
+            </div>
         </div>
     </section>
     
@@ -120,7 +122,7 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-4">System Architecture</h2>
                 <div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
-                [cite_start]<p class="text-xl text-gray-600 mt-6">Open-source components optimized for constrained environments [cite: 287]</p>
+                <p class="text-xl text-gray-600 mt-6">Open-source components optimized for constrained environments</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -130,7 +132,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Dense Retriever</h3>
                     <p class="text-gray-600 text-lg mb-4">
-                        [cite_start]Utilizes facebook/contriever-msmarco to index Wikipedia paragraphs from the HotpotQA distractor setting[cite: 101].
+                        Utilizes facebook/contriever-msmarco to index Wikipedia paragraphs from the HotpotQA distractor setting.
                     </p>
                     <div class="skill-bar">
                         <div class="skill-bar-fill" data-width="100%" style="width: 0;"></div>
@@ -143,7 +145,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Lightweight Controllers</h3>
                     <p class="text-gray-600 text-lg mb-4">
-                        [cite_start]A Labeler and Filter built on top of a frozen DeBERTa-v3 encoder with small classification heads to control retrieval hops[cite: 51, 243].
+                        A Labeler and Filter built on top of a frozen DeBERTa-v3 encoder with small classification heads to control retrieval hops.
                     </p>
                     <div class="skill-bar">
                         <div class="skill-bar-fill" data-width="100%" style="width: 0;"></div>
@@ -156,7 +158,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Answer Generator</h3>
                     <p class="text-gray-600 text-lg mb-4">
-                        [cite_start]Meta-Llama-3-8B-Instruct runs via a local vLLM OpenAI-compatible server for both data synthesis and final generation[cite: 102].
+                        Meta-Llama-3-8B-Instruct runs via a local vLLM OpenAI-compatible server for both data synthesis and final generation.
                     </p>
                     <div class="skill-bar">
                         <div class="skill-bar-fill" data-width="100%" style="width: 0;"></div>
@@ -169,7 +171,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Colab-Friendly Setup</h3>
                     <p class="text-gray-600 text-lg mb-4">
-                        [cite_start]The full pipeline (data synthesis, training, and inference) runs seamlessly end-to-end on a single NVIDIA A100 GPU[cite: 26, 286].
+                        The full pipeline (data synthesis, training, and inference) runs seamlessly end-to-end on a single NVIDIA A100 GPU.
                     </p>
                     <div class="skill-bar">
                         <div class="skill-bar-fill" data-width="100%" style="width: 0;"></div>
@@ -184,7 +186,7 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-4">Key Results & Performance</h2>
                 <div class="w-24 h-1 gradient-bg mx-auto rounded-full"></div>
-                [cite_start]<p class="text-xl text-gray-600 mt-6">Validating the efficiency trend of EfficientRAG at a smaller scale [cite: 29]</p>
+                <p class="text-xl text-gray-600 mt-6">Validating the efficiency trend of EfficientRAG at a smaller scale</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -192,7 +194,7 @@
                     <div class="text-6xl mb-6 zoom-hover">📈</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Higher Retrieval Recall</h3>
                     <p class="text-gray-600 text-lg">
-                        [cite_start]Achieves a recall of 79.74%, substantially outperforming the 69.86% of the Direct-R@10 baseline and the 71.21% of the SelfASK baseline[cite: 133, 134, 135].
+                        Achieves a recall of 79.74%, substantially outperforming the 69.86% of the Direct-R@10 baseline and the 71.21% of the SelfASK baseline.
                     </p>
                 </div>
                 
@@ -200,7 +202,7 @@
                     <div class="text-6xl mb-6 zoom-hover">📉</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Fewer Retrieved Chunks</h3>
                     <p class="text-gray-600 text-lg">
-                        [cite_start]Learned hop control avoids over-fetching distractors, retrieving only 7.29 chunks per question on average compared to SelfAsk's 25.45[cite: 134, 135, 136].
+                        Learned hop control avoids over-fetching distractors, retrieving only 7.29 chunks per question on average compared to SelfAsk's 25.45.
                     </p>
                 </div>
                 
@@ -208,7 +210,7 @@
                     <div class="text-6xl mb-6 zoom-hover">🎯</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Better QA Accuracy</h3>
                     <p class="text-gray-600 text-lg">
-                        [cite_start]Outperforms baselines across all metrics, attaining 52.29 Exact Match (EM), 57.73 token-level F1, and 50.98 Answer Accuracy[cite: 145].
+                        Outperforms baselines across all metrics, attaining 52.29 Exact Match (EM), 57.73 token-level F1, and 50.98 Answer Accuracy.
                     </p>
                 </div>
                 
@@ -216,7 +218,7 @@
                     <div class="text-6xl mb-6 zoom-hover">⚡</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Single LLM Invocation</h3>
                     <p class="text-gray-600 text-lg">
-                        Eliminates the need for per-hop generative reasoning. [cite_start]The pipeline uses approximately a single LLM call per question for the final answer[cite: 24, 29].
+                        Eliminates the need for per-hop generative reasoning. The pipeline uses approximately a single LLM call per question for the final answer.
                     </p>
                 </div>
                 
@@ -224,7 +226,7 @@
                     <div class="text-6xl mb-6 zoom-hover">⏱️</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Efficient Training</h3>
                     <p class="text-gray-600 text-lg">
-                        [cite_start]The Labeler was trained on only ~14% of the synthetic data yet reached 98.1% token-level accuracy and ~90% token-level F1[cite: 42, 49].
+                        The Labeler was trained on only ~14% of the synthetic data yet reached 98.1% token-level accuracy and ~90.1% token-level F1.
                     </p>
                 </div>
                 
@@ -232,7 +234,7 @@
                     <div class="text-6xl mb-6 zoom-hover">📚</div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Reproducible Pipeline</h3>
                     <p class="text-gray-600 text-lg">
-                        [cite_start]Provides an educational reference for multi-hop RAG research, tracking code patches and infrastructure changes to make the original codebase accessible[cite: 11, 31].
+                        Provides an educational reference for multi-hop RAG research, tracking code patches and infrastructure changes to make the original codebase accessible.
                     </p>
                 </div>
             </div>
@@ -244,15 +246,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="text-white" data-aos="zoom-in" data-aos-delay="0">
                     <div class="text-5xl font-black mb-2"><span class="counter" data-target="79">0</span>%</div>
-                    [cite_start]<div class="text-xl font-light opacity-90">Retrieval Recall@K [cite: 118]</div>
+                    <div class="text-xl font-light opacity-90">Retrieval Recall@K</div>
                 </div>
                 <div class="text-white" data-aos="zoom-in" data-aos-delay="100">
                     <div class="text-5xl font-black mb-2 counter" data-target="7">0</div>
-                    <div class="text-xl font-light opacity-90">Avg. [cite_start]Chunks Retrieved [cite: 118]</div>
+                    <div class="text-xl font-light opacity-90">Avg. Chunks Retrieved</div>
                 </div>
                 <div class="text-white" data-aos="zoom-in" data-aos-delay="200">
                     <div class="text-5xl font-black mb-2 counter" data-target="52">0</div>
-                    [cite_start]<div class="text-xl font-light opacity-90">Exact Match (EM) Score [cite: 144]</div>
+                    <div class="text-xl font-light opacity-90">Exact Match (EM) Score</div>
                 </div>
             </div>
         </div>
@@ -271,7 +273,7 @@
                         1
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Retrieve</h3>
-                    [cite_start]<p class="text-gray-600">Dense retriever fetches the initial top-k passages based on the query[cite: 45].</p>
+                    <p class="text-gray-600">Dense retriever fetches the initial top-k passages based on the query.</p>
                 </div>
                 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="100">
@@ -279,7 +281,7 @@
                         2
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Label & Tag</h3>
-                    [cite_start]<p class="text-gray-600">Labeler predicts token-level useful labels and assigns a &lt;Continue&gt; or &lt;Terminate&gt; chunk tag[cite: 50].</p>
+                    <p class="text-gray-600">Labeler predicts token-level useful labels and assigns a &lt;Continue&gt; or &lt;Terminate&gt; chunk tag.</p>
                 </div>
                 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="200">
@@ -287,7 +289,7 @@
                         3
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Filter & Refine</h3>
-                    [cite_start]<p class="text-gray-600">Filter assigns binary labels to aggregated tokens and constructs the next-hop query[cite: 53, 54].</p>
+                    <p class="text-gray-600">Filter assigns binary labels to aggregated tokens and constructs the next-hop query.</p>
                 </div>
                 
                 <div class="text-center" data-aos="fade-up" data-aos-delay="300">
@@ -295,7 +297,7 @@
                         4
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-2">Generate</h3>
-                    [cite_start]<p class="text-gray-600">The generator (LLaMA-3) produces the final answer from the compact context[cite: 56].</p>
+                    <p class="text-gray-600">The generator (LLaMA-3) produces the final answer from the compact context.</p>
                 </div>
             </div>
         </div>
@@ -305,7 +307,7 @@
         <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
             <h2 class="text-4xl sm:text-5xl font-bold gradient-text mb-6">Explore the TinyReproduction</h2>
             <p class="text-xl text-gray-600 mb-10">
-                [cite_start]A compact, Colab-friendly testbed for future work on efficient multi-hop RAG, including exploring alternative controllers and robustness studies[cite: 155].
+                A compact, Colab-friendly testbed for future work on efficient multi-hop RAG, including exploring alternative controllers and robustness studies.
             </p>
             <a href="#" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-12 py-5 rounded-lg font-bold text-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 ripple shine">
                 View on GitHub <i class="fas fa-arrow-right ml-2"></i>
@@ -324,7 +326,7 @@
                         <span class="text-2xl font-bold">Mini-EfficientRAG</span>
                     </div>
                     <p class="text-gray-400">
-                        [cite_start]A Tiny Reproduction of an Efficient & Accurate Retrieval Augmented Generation System[cite: 236].
+                        A Tiny Reproduction of an Efficient & Accurate Retrieval Augmented Generation System.
                     </p>
                 </div>
                 
@@ -340,8 +342,8 @@
                 
                 <div>
                     <h4 class="text-lg font-bold mb-4">Contact</h4>
-                    [cite_start]<p class="text-gray-400 mb-2">Ilia Hashemi Rad [cite: 2]</p>
-                    [cite_start]<p class="text-gray-400 mb-4">Department of Electrical & Computer Engineering<br>Purdue University [cite: 3]</p>
+                    <p class="text-gray-400 mb-2">Ilia Hashemi Rad</p>
+                    <p class="text-gray-400 mb-4">Department of Electrical & Computer Engineering<br>Purdue University</p>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition duration-300 zoom-hover" title="GitHub">
                             <i class="fab fa-github"></i>
@@ -355,7 +357,7 @@
             
             <div class="border-t border-gray-800 pt-8 text-center">
                 <p class="text-gray-400">
-                    &copy; 2025 Mini-EfficientRAG. [cite_start]A TinyReproduction Project on HotpotQA[cite: 8].
+                    &copy; 2025 Mini-EfficientRAG. A TinyReproduction Project on HotpotQA.
                 </p>
             </div>
         </div>
